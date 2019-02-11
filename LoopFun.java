@@ -51,7 +51,6 @@ public class LoopFun
           String newWord1 ="";
           char [] newWord = word.toCharArray();
           char[] alfabet = "abcdefghijklmnopqrstuvwxyzabc".toCharArray();
-          
           String alphabet ="abcdefghijklmnopqrstuvwxyz";
           for (int i=0;i<word.length();i++){
                 int index = alphabet.indexOf(newWord[i]);

@@ -46,11 +46,8 @@ public class StringUtilities {
      * @return `value` with char of value `charToRemove` removed
      */
     public String removeCharacter(String value, Character charToRemove) {
-        int location = value.indexOf(charToRemove);
-        StringBuilder value1 = new StringBuilder(value);
-        value1.deleteCharAt(location);
-        System.out.println(value1.toString());
-        return value1.toString();
+        
+        return value.replaceAll(charToRemove.toString(),"");
     }
 
     /**
