@@ -1,11 +1,14 @@
-
+import java.io.*;
+import java.lang.*;
+import java.lang.StringBuilder;
+import java.lang.StringBuffer;
 public class StringUtilities {
     /**
      * @param input value to be returned
      * @return `input`
      */
     public String returnInput(String input) {
-        return null;
+        return input;
     }
 
     /**
@@ -14,7 +17,7 @@ public class StringUtilities {
      * @return the concatenation of `baseValue` and `valueToBeAdded`
      */
     public String concatenate(String baseValue, String valueToBeAdded) {
-        return null;
+        return baseValue+valueToBeAdded;
     }
 
     /**
@@ -22,7 +25,10 @@ public class StringUtilities {
      * @return identical string with characters in opposite order
      */
     public String reverse(String valueToBeReversed) {
-        return null;
+        String reverseString="";
+        for(int i=valueToBeReversed.length()-1; i>=0;i--){
+        reverseString= reverseString+ valueToBeReversed.charAt(i);}
+        return reverseString;
     }
 
     /**
@@ -30,7 +36,8 @@ public class StringUtilities {
      * @return middle character of `word`
      */
     public Character getMiddleCharacter(String word) {
-        return null;
+        int middle = word.length()/2;
+        return word.charAt(middle);
     }
 
     /**
@@ -39,7 +46,11 @@ public class StringUtilities {
      * @return `value` with char of value `charToRemove` removed
      */
     public String removeCharacter(String value, Character charToRemove) {
-        return null;
+        int location = value.indexOf(charToRemove);
+        StringBuilder value1 = new StringBuilder(value);
+        value1.deleteCharAt(location);
+        System.out.println(value1.toString());
+        return value1.toString();
     }
 
     /**
@@ -47,6 +58,7 @@ public class StringUtilities {
      * @return last `word` in sentence
      */
     public String getLastWord(String sentence) {
-        return null;
+        int location = sentence.lastIndexOf(" ");
+        return sentence.substring(location+1);
     }
 }
